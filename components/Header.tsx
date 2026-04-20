@@ -1,33 +1,45 @@
-export default function Hero() {
+export default function Header() {
   return (
-    <section
+    <header
       style={{
-        padding: "120px 20px",
-        textAlign: "center",
-        background: "#0b0b0b",
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "18px 28px",
+        background: "#05070b",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
         color: "white"
       }}
     >
-      <h1 style={{ fontSize: "64px", marginBottom: "20px" }}>
-        AlphaScope AI
-      </h1>
-
-      <p style={{ fontSize: "22px", opacity: 0.8, marginBottom: "30px" }}>
-        Premium crypto intelligence platform
-      </p>
-
-      <button
+      <a
+        href="/"
         style={{
-          padding: "16px 34px",
-          fontSize: "18px",
-          borderRadius: "12px",
-          border: "none",
-          background: "#32d74b",
-          cursor: "pointer"
+          color: "white",
+          textDecoration: "none",
+          fontWeight: 800,
+          fontSize: 28
         }}
       >
-        Start Free Trial
-      </button>
-    </section>
+        AlphaScope AI
+      </a>
+
+      <nav style={{ display: "flex", gap: "18px", alignItems: "center" }}>
+        <a href="#live" style={{ color: "white", textDecoration: "none" }}>
+          Live
+        </a>
+        <a href="#signals" style={{ color: "white", textDecoration: "none" }}>
+          Signals
+        </a>
+        <a href="#news" style={{ color: "white", textDecoration: "none" }}>
+          News
+        </a>
+        <a href="#pricing" style={{ color: "white", textDecoration: "none" }}>
+          Pricing
+        </a>
+      </nav>
+    </header>
   );
 }
