@@ -1,4 +1,4 @@
-xport default function Header() {
+export default function Header() {
   return (
     <header
       style={{
@@ -9,9 +9,8 @@ xport default function Header() {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "18px 28px",
+        background: "#05070b",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
-        background: "rgba(5,7,11,0.88)",
-        backdropFilter: "blur(10px)",
         color: "white",
       }}
     >
@@ -22,38 +21,28 @@ xport default function Header() {
           textDecoration: "none",
           fontWeight: 800,
           fontSize: 28,
-          letterSpacing: "-1px",
         }}
       >
         AlphaScope AI
       </a>
 
-      <nav style={{ display: "flex", gap: 18, alignItems: "center" }}>
-        <a href="#live" style={linkStyle}>Live</a>
-        <a href="#signals" style={linkStyle}>Signals</a>
-        <a href="#news" style={linkStyle}>News</a>
-        <a href="#pricing" style={linkStyle}>Pricing</a>
-        <a
-          href="#pricing"
-          style={{
-            textDecoration: "none",
-            color: "#071019",
-            background: "#67ff9a",
-            padding: "10px 16px",
-            borderRadius: 12,
-            fontWeight: 800,
-          }}
-        >
-          Join
+      <nav style={{ display: "flex", gap: "18px", alignItems: "center" }}>
+        <a href="#live" style={{ color: "white", textDecoration: "none" }}>
+          Live
+        </a>
+
+        <a href="#signals" style={{ color: "white", textDecoration: "none" }}>
+          Signals
+        </a>
+
+        <a href="#news" style={{ color: "white", textDecoration: "none" }}>
+          News
+        </a>
+
+        <a href="#pricing" style={{ color: "white", textDecoration: "none" }}>
+          Pricing
         </a>
       </nav>
     </header>
   );
 }
-
-const linkStyle = {
-  color: "rgba(255,255,255,0.82)",
-  textDecoration: "none",
-  fontWeight: 600,
-  fontSize: 14,
-};
